@@ -43,27 +43,27 @@ const ServicesSection = () => {
   };
 
   return (
-    <section id="services" className="py-24 bg-tactical-dark">
+    <section id="services" className="py-16 sm:py-24 bg-tactical-dark">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-gradient mb-6">Exclusive Services</h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gradient mb-6">Exclusive Services</h2>
+          <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
             Six pillars of excellence designed for the world's elite athletes
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {services.map((service, index) => (
             <div 
               key={service.title}
-              className="glass-effect p-8 rounded-lg hover:gold-glow transition-all duration-300 transform hover:scale-105"
+              className="glass-effect p-6 sm:p-8 rounded-lg hover:gold-glow transition-all duration-300 transform hover:scale-105"
               style={{animationDelay: `${index * 0.1}s`}}
             >
-              <service.icon className="w-12 h-12 text-tactical-gold mb-6" />
-              <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-              <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+              <service.icon className="w-10 h-10 sm:w-12 sm:h-12 text-tactical-gold mb-4 sm:mb-6" />
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">{service.title}</h3>
+              <p className="text-sm sm:text-base text-gray-300 mb-4 sm:mb-6 leading-relaxed">{service.description}</p>
               <Button 
-                className="w-full bg-gradient-gold text-black hover:opacity-90 transition-all duration-300"
+                className="w-full bg-gradient-gold text-black hover:opacity-90 transition-all duration-300 text-sm sm:text-base"
                 onClick={() => handleInquiry(service.title)}
               >
                 Begin Inquiry

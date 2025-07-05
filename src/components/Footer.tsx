@@ -1,4 +1,6 @@
 
+import { Link } from 'react-router-dom';
+
 const Footer = () => {
   return (
     <footer className="bg-tactical-dark py-12 border-t border-tactical-gold">
@@ -12,9 +14,9 @@ const Footer = () => {
           </p>
           
           <div className="flex justify-center space-x-8 mb-8">
-            <a href="#" className="text-gray-400 hover:text-tactical-gold transition-colors">Privacy</a>
-            <a href="#" className="text-gray-400 hover:text-tactical-gold transition-colors">Terms</a>
-            <a href="#" className="text-gray-400 hover:text-tactical-gold transition-colors">Contact</a>
+            <Link to="/privacy" className="text-gray-400 hover:text-tactical-gold transition-colors">Privacy</Link>
+            <Link to="/terms" className="text-gray-400 hover:text-tactical-gold transition-colors">Terms</Link>
+            <Link to="/contact" className="text-gray-400 hover:text-tactical-gold transition-colors">Contact</Link>
           </div>
 
           <div className="border-t border-tactical-gold pt-8">

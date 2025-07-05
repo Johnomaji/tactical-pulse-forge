@@ -1,63 +1,70 @@
 
 import { Button } from '@/components/ui/button';
+import { Eye, Activity, Crown, Briefcase, Shield, Star } from 'lucide-react';
 
 const ServicesSection = () => {
   const services = [
     {
+      icon: Eye,
       title: "Alpha Scouting",
-      description: "Elite talent identification through AI-powered global networks",
-      icon: "🔍"
+      description: "Proprietary AI algorithms combined with our global scout network to identify tomorrow's superstars before the competition."
     },
     {
+      icon: Activity,
       title: "Performance Command",
-      description: "Real-time biometric monitoring and tactical optimization",
-      icon: "⚡"
+      description: "Live biometric tracking and tactical analysis providing real-time insights to optimize on-field performance and market value."
     },
     {
+      icon: Crown,
       title: "Career Sovereignty",
-      description: "Strategic career planning and elite club positioning",
-      icon: "👑"
+      description: "Strategic career planning with exclusive access to top-tier clubs and negotiation expertise that maximizes every opportunity."
     },
     {
+      icon: Briefcase,
       title: "Brand Empire",
-      description: "Global brand development and commercial partnerships",
-      icon: "🌟"
+      description: "Comprehensive brand development and protection services that transform athletes into global commercial powerhouses."
     },
     {
+      icon: Shield,
       title: "Holistic Guardianship",
-      description: "Complete lifestyle management and personal development",
-      icon: "🛡️"
+      description: "Complete lifestyle management including security, wellness, education, and family support for total peace of mind."
     },
     {
+      icon: Star,
       title: "Legacy Strategy",
-      description: "Long-term wealth preservation and post-career planning",
-      icon: "🏛️"
+      description: "Long-term wealth preservation and post-career planning ensuring generational success and lasting impact."
     }
   ];
+
+  const handleInquiry = (serviceName: string) => {
+    // Scroll to contact section
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    console.log(`Inquiry for ${serviceName} service`);
+  };
 
   return (
     <section id="services" className="py-24 bg-tactical-dark">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold text-gradient mb-6">Exclusive Services</h2>
+          <h2 className="text-3xl md:text-5xl font-bold text-gradient mb-6">Exclusive Services</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Six curated offerings designed for the world's elite football talent
+            Six pillars of excellence designed for the world's elite athletes
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div 
-              key={index}
-              className="glass-effect p-8 rounded-lg hover:gold-glow transition-all duration-500 group animate-slide-in-right"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              key={service.title}
+              className="glass-effect p-8 rounded-lg hover:gold-glow transition-all duration-300 transform hover:scale-105"
+              style={{animationDelay: `${index * 0.1}s`}}
             >
-              <div className="text-5xl mb-6 group-hover:animate-float">{service.icon}</div>
-              <h3 className="text-2xl font-bold text-tactical-gold mb-4">{service.title}</h3>
+              <service.icon className="w-12 h-12 text-tactical-gold mb-6" />
+              <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
               <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
               <Button 
-                variant="outline"
-                className="w-full border-tactical-gold text-tactical-gold hover:bg-tactical-gold hover:text-black transition-all duration-300"
+                className="w-full bg-gradient-gold text-black hover:opacity-90 transition-all duration-300"
+                onClick={() => handleInquiry(service.title)}
               >
                 Begin Inquiry
               </Button>

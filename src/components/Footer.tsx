@@ -21,7 +21,7 @@ const Footer = () => {
 
           <div className="border-t border-tactical-gold pt-8">
             <p className="text-gray-500 text-sm">
-              © 2024 Tactical Master. All rights reserved. Elite services for qualified clients only.
+              © 2025 Tactical Master. All rights reserved. Elite services for qualified clients only.
             </p>
           </div>
         </div>

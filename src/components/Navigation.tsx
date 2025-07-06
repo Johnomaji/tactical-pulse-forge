@@ -24,8 +24,8 @@ const Navigation = () => {
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       isScrolled ? 'glass-effect py-4' : 'bg-transparent py-6'
     }`}>
-      <div className="container mx-auto px-6 flex justify-between items-center">
-        <div className="text-xl md:text-2xl font-bold text-gradient">
+      <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
+        <div className="text-lg md:text-2xl font-bold text-gradient truncate">
           TACTICAL MASTER
         </div>
         
@@ -70,27 +70,27 @@ const Navigation = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden glass-effect mt-2 mx-6 rounded-lg p-4">
-          <div className="flex flex-col space-y-4">
+        <div className="md:hidden absolute top-full left-0 right-0 glass-effect mx-4 rounded-lg p-6 mt-2 shadow-lg">
+          <div className="flex flex-col space-y-6">
             {['Services', 'Process', 'Team', 'Insights'].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
-                className="text-white hover:text-tactical-gold transition-colors duration-300 text-left"
+                className="text-white hover:text-tactical-gold transition-colors duration-300 text-left py-2 text-lg"
               >
                 {item}
               </button>
             ))}
-            <div className="flex flex-col space-y-2 pt-4 border-t border-tactical-gold">
+            <div className="flex flex-col space-y-3 pt-6 border-t border-tactical-gold/30">
               <Button 
                 variant="outline" 
-                className="border-tactical-gold text-tactical-gold hover:bg-tactical-gold hover:text-black w-full"
+                className="border-tactical-gold text-tactical-gold hover:bg-tactical-gold hover:text-black w-full py-3"
                 onClick={() => scrollToSection('contact')}
               >
                 Log In
               </Button>
               <Button 
-                className="bg-gradient-gold text-black hover:opacity-90 w-full"
+                className="bg-gradient-gold text-black hover:opacity-90 w-full py-3"
                 onClick={() => scrollToSection('contact')}
               >
                 Private Preview

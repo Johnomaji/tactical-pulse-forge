@@ -65,7 +65,7 @@ const ContactSection = () => {
 
             <Button 
               type="submit"
-              className="w-full bg-gradient-gold text-black text-lg py-6 hover:opacity-90 transform hover:scale-105 transition-all duration-300"
+              className="w-full bg-gradient-gold text-black text-sm md:text-lg py-4 md:py-6 hover:opacity-90 transform hover:scale-105 transition-all duration-300 px-4"
             >
               Submit Secure Application
             </Button>

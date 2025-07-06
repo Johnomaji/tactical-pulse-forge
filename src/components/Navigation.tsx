@@ -47,7 +47,7 @@ const Navigation = () => {
           <Button 
             variant="outline" 
             className="border-tactical-gold text-tactical-gold hover:bg-tactical-gold hover:text-black"
-            onClick={() => scrollToSection('contact')}
+            onClick={() => window.location.href = '/login'}
           >
             Log In
           </Button>
@@ -61,7 +61,7 @@ const Navigation = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-white"
+          className="md:hidden text-white p-2 hover:bg-white/10 rounded-md transition-colors z-50 relative"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -85,7 +85,7 @@ const Navigation = () => {
               <Button 
                 variant="outline" 
                 className="border-tactical-gold text-tactical-gold hover:bg-tactical-gold hover:text-black w-full py-3"
-                onClick={() => scrollToSection('contact')}
+                onClick={() => window.location.href = '/login'}
               >
                 Log In
               </Button>

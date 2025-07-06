@@ -116,10 +116,10 @@ const TechSection = () => {
           </div>
         </div>
 
-        <div className="text-center">
+        <div className="text-center px-4">
           <Button 
             size="lg"
-            className="bg-gradient-gold text-black text-xl px-12 py-6 hover:opacity-90 transform hover:scale-105 transition-all duration-300"
+            className="bg-gradient-gold text-black text-sm md:text-xl px-6 md:px-12 py-4 md:py-6 hover:opacity-90 transform hover:scale-105 transition-all duration-300 w-full md:w-auto"
             onClick={scrollToContact}
           >
             Secure Access to the Deck

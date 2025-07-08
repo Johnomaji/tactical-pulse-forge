@@ -12,7 +12,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-tactical-dark via-tactical-gray to-tactical-dark overflow-hidden">
+    <section className="mt-16 relative min-h-screen flex items-center justify-center bg-gradient-to-br from-tactical-dark via-tactical-gray to-tactical-dark overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-tactical-gold rounded-full blur-3xl animate-pulse-gold"></div>

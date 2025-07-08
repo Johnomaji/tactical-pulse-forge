@@ -19,7 +19,7 @@ const Preloader = () => {
       <div className="text-center">
         <div className="relative mb-8">
           <div className="w-20 h-20 mx-auto animate-spin">
-            <svg viewBox="0 0 100 100" className="w-full h-full">
+            {/* <svg viewBox="0 0 100 100" className="w-full h-full">
               <circle
                 cx="50"
                 cy="50"
@@ -52,7 +52,8 @@ const Preloader = () => {
                 stroke="#0A0A0B"
                 strokeWidth="3"
               />
-            </svg>
+            </svg> */}
+            <img src="ball.png" alt="ball" />
           </div>
         </div>
         <div className="text-2xl font-bold text-gradient mb-4">TACTICAL MASTER</div>

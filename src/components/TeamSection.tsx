@@ -4,21 +4,25 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 const TeamSection = () => {
   const team = [
     { 
+      Image: "marcus.png",
       name: "Marcus Chamberlain", 
       role: "Principal Agent",
       bio: "Former Premier League executive with 15+ years in elite negotiations."
     },
     { 
+      Image: "sarah.png",
       name: "Dr. Sarah Chen", 
       role: "Head of Analytics",
       bio: "Data science leader specializing in sports performance optimization."
     },
     { 
+      Image: "antonio.png",
       name: "Antonio Rivera", 
       role: "Performance Director",
       bio: "Elite conditioning coach for multiple international squads."
     },
     { 
+      Image: "emma.png",
       name: "Emma Thompson", 
       role: "Brand Strategist",
       bio: "Global marketing expert building athlete empires worldwide."
@@ -54,7 +58,10 @@ const TeamSection = () => {
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="w-24 h-24 sm:w-32 sm:h-32 bg-tactical-gray-light rounded-full mx-auto mb-4 flex items-center justify-center text-2xl sm:text-4xl group-hover:gold-glow transition-all duration-300">
-                👤
+               <img 
+               src={member.Image} 
+               alt={member.name}
+               className='w-full h-full object-cover' />
               </div>
               <h3 className="text-lg sm:text-xl font-bold text-tactical-gold mb-2">{member.name}</h3>
               <div className="text-gray-400 text-xs sm:text-sm mb-3">{member.role}</div>

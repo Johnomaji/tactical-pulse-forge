@@ -69,6 +69,8 @@ const HeroSection = () => {
           <button 
             onClick={scrollToServices}
             className="text-tactical-gold hover:text-tactical-gold-light transition-colors"
+            aria-label="Scroll to services"
+            title="Scroll to services"
           >
             <ChevronDown size={32} />
           </button>

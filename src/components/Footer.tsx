@@ -6,9 +6,7 @@ const Footer = () => {
     <footer className="bg-tactical-dark py-12 border-t border-tactical-gold">
       <div className="container mx-auto px-6">
         <div className="text-center">
-          <div className="text-3xl font-bold text-gradient mb-4">
-            TACTICAL MASTER
-          </div>
+          <img className="mx-auto mb-4 w-12 h-12 md:w-16 md:h-16" src="logo.png" alt="Tactical Master Logo" />
           <p className="text-gray-400 mb-8">
             Elite Football & Talent Management
           </p>

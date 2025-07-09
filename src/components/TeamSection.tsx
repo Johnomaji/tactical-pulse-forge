@@ -30,14 +30,14 @@ const TeamSection = () => {
   ];
 
   const partnerships = [
-    { name: "FIFA", logo: "🏆" },
-    { name: "UEFA", logo: "⭐" },
-    { name: "Premier League", logo: "👑" },
-    { name: "LaLiga", logo: "🇪🇸" },
-    { name: "Bundesliga", logo: "🇩🇪" },
-    { name: "Serie A", logo: "🇮🇹" },
-    { name: "Ligue 1", logo: "🇫🇷" },
-    { name: "MLS", logo: "🇺🇸" }
+    { name: "FIFA", logo: "fifa.png" },
+    { name: "UEFA", logo: "uefa.png" },
+    { name: "Premier League", logo: "premier.png" },
+    { name: "LaLiga", logo: "laliga.png" },
+    { name: "Bundesliga", logo: "bundesliga.png" },
+    { name: "Serie A", logo: "serie.png" },
+    { name: "Ligue 1", logo: "ligue.png" },
+    { name: "MLS", logo: "mls.png" }
   ];
 
   return (
@@ -85,7 +85,9 @@ const TeamSection = () => {
                 {partnerships.map((partner, index) => (
                   <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 sm:basis-1/3 md:basis-1/4">
                     <div className="flex flex-col items-center p-4 glass-effect rounded-lg hover:gold-glow transition-all duration-300">
-                      <div className="text-3xl sm:text-4xl mb-3">{partner.logo}</div>
+                      <div className="text-3xl sm:text-4xl mb-3">
+                        <img src={partner.logo} alt={partner.name} />
+                      </div>
                       <div className="text-sm sm:text-base font-bold text-white">{partner.name}</div>
                     </div>
                   </CarouselItem>

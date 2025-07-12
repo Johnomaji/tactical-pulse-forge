@@ -5,8 +5,8 @@ const TeamSection = () => {
   const team = [
     { 
       Image: "marcus.png",
-      name: "Marcus Chamberlain", 
-      role: "Principal Agent",
+      name: "Ugbefu Dominic", 
+      role: "CEO & Founder",
       bio: "Former Premier League executive with 15+ years in elite negotiations."
     },
     { 

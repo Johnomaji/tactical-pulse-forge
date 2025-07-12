@@ -11,17 +11,18 @@ const CaseStudiesSection = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-          <div className="glass-effect p-8 rounded-lg">
-            <h3 className="text-2xl font-bold text-tactical-gold mb-4">Elite Discovery & Placement</h3>
-            <p className="text-gray-300 mb-6">
-              Identified promising talent through AI scouting, monitored development through 
-              biometric tracking, and secured elite club placement within 18 months.
-            </p>
-            <div className="flex space-x-4 text-sm">
-              <span className="bg-tactical-gold text-black px-3 py-1 rounded">Scouting</span>
-              <span className="bg-tactical-gold text-black px-3 py-1 rounded">Monitoring</span>
-              <span className="bg-tactical-gold text-black px-3 py-1 rounded">Placement</span>
-            </div>
+          <div class="glass-effect p-4 sm:p-6 md:p-8 rounded-lg w-full max-w-full overflow-hidden">
+  <h3 class="text-2xl font-bold text-tactical-gold mb-4">Elite Discovery &amp; Placement</h3>
+  <p class="text-gray-300 mb-6">
+    Identified promising talent through AI scouting, monitored development through biometric tracking, and secured elite club placement within 18 months.
+  </p>
+  <div class="flex flex-wrap gap-2 text-sm">
+    <span class="bg-tactical-gold text-black px-3 py-1 rounded">Scouting</span>
+    <span class="bg-tactical-gold text-black px-3 py-1 rounded">Monitoring</span>
+    <span class="bg-tactical-gold text-black px-3 py-1 rounded">Placement</span>
+  </div>
+</div>
+
           </div>
 
           <div className="glass-effect p-8 rounded-lg">

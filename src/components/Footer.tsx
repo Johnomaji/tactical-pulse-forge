@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="text-center">
           <img className="mx-auto mb-4 w-12 h-12 md:w-16 md:h-16" src="logo.png" alt="Tactical Master Logo" />
           <p className="text-gray-400 mb-8">
-            Elite Football & Talent Management
+            Elite Footballing & Talent Management
           </p>
           
           <div className="flex justify-center space-x-8 mb-8">

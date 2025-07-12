@@ -85,9 +85,14 @@ const TeamSection = () => {
                 {partnerships.map((partner, index) => (
                   <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 sm:basis-1/3 md:basis-1/4">
                     <div className="flex flex-col items-center p-4 glass-effect rounded-lg hover:gold-glow transition-all duration-300">
-                      <div className="text-3xl sm:text-4xl mb-3">
-                        <img src={partner.logo} alt={partner.name} />
-                      </div>
+                      <div className="w-24 h-24 sm:w-28 sm:h-28 mb-3 flex items-center justify-center">
+  <img
+    src={partner.logo}
+    alt={partner.name}
+    className="max-h-full max-w-full object-contain"
+  />
+</div>
+
                       <div className="text-sm sm:text-base font-bold text-white">{partner.name}</div>
                     </div>
                   </CarouselItem>

@@ -25,9 +25,10 @@ const Navigation = () => {
       isScrolled ? 'glass-effect py-4' : 'bg-transparent py-6'
     }`}>
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
-        <div className="text-lg md:text-2xl font-bold text-gradient truncate">
+        <img className='w-12 h-12 md:w-16 md:h-16' src="logo.png" alt="Tactical Master Logo" />
+        {/* <div className="text-lg md:text-2xl font-bold text-gradient truncate">
           TACTICAL MASTER
-        </div>
+        </div> */}
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8">
@@ -43,7 +44,7 @@ const Navigation = () => {
         </div>
 
         {/* Desktop Buttons */}
-        <div className="hidden md:flex space-x-4">
+        <div className="hidden md:flex space-x-4 pr-5">
           <Button 
             variant="outline" 
             className="border-tactical-gold text-tactical-gold hover:bg-tactical-gold hover:text-black"
@@ -61,7 +62,7 @@ const Navigation = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-white p-2 hover:bg-white/10 rounded-md transition-colors z-50 relative"
+          className="md:hidden text-white p-2 hover:bg-white/10 rounded-md transition-colors z-50 relative pr-10"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -70,7 +71,7 @@ const Navigation = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 glass-effect mx-4 rounded-lg p-6 mt-2 shadow-lg">
+        <div className="md:hidden absolute top-full left-0 right-10 glass-effect mx-4 rounded-lg p-6 mt-2 shadow-lg">
           <div className="flex flex-col space-y-6">
             {['Services', 'Process', 'Team', 'Insights'].map((item) => (
               <button

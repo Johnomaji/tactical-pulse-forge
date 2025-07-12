@@ -4,21 +4,25 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 const TeamSection = () => {
   const team = [
     { 
+      Image: "marcus.png",
       name: "Marcus Chamberlain", 
       role: "Principal Agent",
       bio: "Former Premier League executive with 15+ years in elite negotiations."
     },
     { 
+      Image: "sarah.png",
       name: "Dr. Sarah Chen", 
       role: "Head of Analytics",
       bio: "Data science leader specializing in sports performance optimization."
     },
     { 
+      Image: "antonio.png",
       name: "Antonio Rivera", 
       role: "Performance Director",
       bio: "Elite conditioning coach for multiple international squads."
     },
     { 
+      Image: "emma.png",
       name: "Emma Thompson", 
       role: "Brand Strategist",
       bio: "Global marketing expert building athlete empires worldwide."
@@ -26,14 +30,14 @@ const TeamSection = () => {
   ];
 
   const partnerships = [
-    { name: "FIFA", logo: "🏆" },
-    { name: "UEFA", logo: "⭐" },
-    { name: "Premier League", logo: "👑" },
-    { name: "LaLiga", logo: "🇪🇸" },
-    { name: "Bundesliga", logo: "🇩🇪" },
-    { name: "Serie A", logo: "🇮🇹" },
-    { name: "Ligue 1", logo: "🇫🇷" },
-    { name: "MLS", logo: "🇺🇸" }
+    { name: "FIFA", logo: "fifa.png" },
+    { name: "UEFA", logo: "uefa.png" },
+    { name: "Premier League", logo: "premier.png" },
+    { name: "LaLiga", logo: "laliga.png" },
+    { name: "Bundesliga", logo: "bundesliga.png" },
+    { name: "Serie A", logo: "serie.png" },
+    { name: "Ligue 1", logo: "ligue.png" },
+    { name: "MLS", logo: "mls.png" }
   ];
 
   return (
@@ -54,7 +58,10 @@ const TeamSection = () => {
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="w-24 h-24 sm:w-32 sm:h-32 bg-tactical-gray-light rounded-full mx-auto mb-4 flex items-center justify-center text-2xl sm:text-4xl group-hover:gold-glow transition-all duration-300">
-                👤
+               <img 
+               src={member.Image} 
+               alt={member.name}
+               className='w-full h-full object-cover' />
               </div>
               <h3 className="text-lg sm:text-xl font-bold text-tactical-gold mb-2">{member.name}</h3>
               <div className="text-gray-400 text-xs sm:text-sm mb-3">{member.role}</div>
@@ -78,7 +85,14 @@ const TeamSection = () => {
                 {partnerships.map((partner, index) => (
                   <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 sm:basis-1/3 md:basis-1/4">
                     <div className="flex flex-col items-center p-4 glass-effect rounded-lg hover:gold-glow transition-all duration-300">
-                      <div className="text-3xl sm:text-4xl mb-3">{partner.logo}</div>
+                      <div className="w-24 h-24 sm:w-28 sm:h-28 mb-3 flex items-center justify-center">
+  <img
+    src={partner.logo}
+    alt={partner.name}
+    className="max-h-full max-w-full object-contain"
+  />
+</div>
+
                       <div className="text-sm sm:text-base font-bold text-white">{partner.name}</div>
                     </div>
                   </CarouselItem>
